@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Components/Layouts/Header';
 import Layouts from './Components/Layouts'
 import axios from 'axios';
+import './app.scss';
 
 class App extends Component{
     constructor(){
@@ -120,10 +121,10 @@ class App extends Component{
     
     render(){
         return(
-            <>
+            <div className='global-container'>
                 <Header handleOnSearch={this.handleOnSearch}/>
                 <Layouts  data={this.state.selectedData} time={this.state.hr}/>
-            </>)
+            </div>)
     }
 }
 
