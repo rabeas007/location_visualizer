@@ -1,19 +1,19 @@
 
 .pin {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50% 50% 50% 0;
   background: #00cae9;
   position: absolute;
   transform: rotate(-45deg);
-  margin: -3px 0 0 -12px;
+  margin: 3px 0 0 -10px;
   z-index: 1;
 }
 .pin:after {
   content: "";
-  width: 7px;
-  height: 7px;
-  margin: 4px 0 0 4px;
+  width: 4px;
+  height: 4px;
+  margin: 3px 0 0 3px;
   background: #e6e6e6;
   position: absolute;
   border-radius: 50%;
@@ -30,8 +30,8 @@
 .pulse {
   background: #d6d4d4;
   border-radius: 50%;
-  height: 7px;
-  width: 7px;
+  height: 5px;
+  width: 5px;
   position: initial;
   margin: 13px 0px 0px -8px;
   transform: rotateX(55deg);
@@ -40,10 +40,10 @@
 .pulse:after {
   content: "";
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   position: absolute;
-  margin: -5px 0 0 -6px;
+  margin: -2px 0 0 -3px;
   animation: pulsate 1s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;

@@ -9,6 +9,8 @@ export default class extends Component{
         this.state={
             opened: false,
         }
+        this.timeout = '';
+        this.marker=React.createRef();
     }
     componentDidUpdate(prevProps) {
         if (this.props.x !== prevProps.x || this.props.y !== prevProps.y) {
@@ -29,23 +31,17 @@ export default class extends Component{
         styleSheet.insertRule(keyframesStyle, styleSheet.cssRules.length);
     };
 
-    getPosition = (receiver) => {
-        const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
-        let x = 0, y =0 ;
-        if (roomElement) {
-            const rect = roomElement.getBoundingClientRect();
-            x = Math.random() * (rect.right - rect.left) + rect.left + 10;
-            y = Math.random() * (rect.bottom - rect.top) + rect.top -10;
-        }
-        return {x, y}
-    };
+    showLabel=()=>{
+        const { opened } = this.state;
+        this.setState({
+            opened: !opened,
+        });
+    }
     render(){
-        const { color, name, id, x, y} = this.props;
-        //this is a fake number to test please change it by receiver number
-          //receiver number should be aligned with the data-name of g element
-        const position = this.getPosition('6095')
+        const { color, name, id, x, y, receiver_desc, badge_type_desc } = this.props;
+
         return (
-            <div style={{left: position.x , top: position.y, position:"absolute", WebkitAnimation: `run-${this.props.id} 1s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
+            <div style={{left: x , top: y, position:"absolute", WebkitAnimation: `run-${this.props.id} 0.7s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
                 {this.state.opened && <Chip
                     avatar={<Avatar>M</Avatar>}
                     variant="outlined"
@@ -53,12 +49,12 @@ export default class extends Component{
                     color='primary'
                     label={id}
                     onClick={()=>console.log('Hi') }
-                    style={{ transform: 'translate(-55%, -26%)'}}
+                    // style={{ transform: 'translate(-55%, -26%)'}}
                   />}
                 <div
                   className="pin bounce"
                   style={{ backgroundColor: color, cursor: 'pointer'}}
-                  title={name + ' '+id}
+                  title={receiver_desc + ' '+id}
                   />
                 <div className="pulse" />
             </div>)

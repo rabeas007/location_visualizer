@@ -10,13 +10,12 @@ export default class extends Component{
             marks:''
         }
     }
-
     render(){
-        
+
         return(
             <>
                 <Mapimg />
-                {this.props && this.props.data && this.props.data.length && this.props.data.map(obj=> <Marker key={obj.id_number} color='blue' x={obj.x*100+'%'} y={obj.y*100+'%'} name={obj.room_num+" "} id={obj.id_number + ''} />)}
+                {this.props && this.props.data && this.props.data.length && this.props.data.map(obj=> <Marker key={obj.id_number} color='blue' x={obj.x} y={obj.y} name={obj.room_num+" "} id={obj.id_number + '' } receiver_desc={obj.receiver_desc+''} badge={obj.badge_type_desc+''} />)}
             </>
         )
     }

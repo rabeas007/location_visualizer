@@ -43,12 +43,25 @@ class App extends Component{
             x_end_time: "10:17:42"
         });
     }
-    
+    getPosition = (receiver) => {
+        const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
+        let x = 0, y =0 ;
+        if (roomElement) {
+            const rect = roomElement.getBoundingClientRect();
+            x = Math.random() * (rect.right - (rect.left * 1.01)) + rect.left;
+            y = Math.random() * ((rect.bottom*0.99) - rect.top) + rect.top;
+        }
+        return {x, y}
+    };
+
     FramesByTime = (data) => {
         const dataByTime = {};
         data && data.forEach((point)=> {
-            if (point.room_num !== null){
-                const { floor_id, sTime, eTime}=point
+            if (point.receiver_id !== null){
+                const { floor_id, sTime, eTime,receiver_id }=point
+                let pos= this.getPosition(receiver_id)
+                point.x=pos.x
+                point.y=pos.y
                 var start=new Date(`October 13, 2014 ${sTime}`)
                 var end=new Date(`October 13, 2014 ${eTime}`)
                 while (start < end) {
