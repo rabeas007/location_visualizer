@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Maps/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Maps/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Markers/Marker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Markers/Marker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Markers/Marker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Markers/Marker.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AMJADE\Rabea\new-app\src\Components\Maps" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="" />
+      <created>1590668976516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590668976516</updated>
+      <workItem from="1590668979861" duration="852000" />
+      <workItem from="1590669926785" duration="1198000" />
+      <workItem from="1590679073728" duration="13899000" />
+      <workItem from="1590913233564" duration="56000" />
+      <workItem from="1591214509850" duration="439000" />
+      <workItem from="1591438852464" duration="13464000" />
+      <workItem from="1591465347276" duration="723000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1419" height="209" key="GridCell.Tab.0.bottom" timestamp="1591470587215">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state width="1419" height="209" key="GridCell.Tab.0.bottom/-209.-1057.1920.1057/0.23.1440.814@0.23.1440.814" timestamp="1591470587215" />
+    <state width="1419" height="209" key="GridCell.Tab.0.center" timestamp="1591470587212">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state width="1419" height="209" key="GridCell.Tab.0.center/-209.-1057.1920.1057/0.23.1440.814@0.23.1440.814" timestamp="1591470587212" />
+    <state width="1419" height="209" key="GridCell.Tab.0.left" timestamp="1591470587210">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state width="1419" height="209" key="GridCell.Tab.0.left/-209.-1057.1920.1057/0.23.1440.814@0.23.1440.814" timestamp="1591470587210" />
+    <state width="1419" height="209" key="GridCell.Tab.0.right" timestamp="1591470587213">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state width="1419" height="209" key="GridCell.Tab.0.right/-209.-1057.1920.1057/0.23.1440.814@0.23.1440.814" timestamp="1591470587213" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Markers/Marker.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
