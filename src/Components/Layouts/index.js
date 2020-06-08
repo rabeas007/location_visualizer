@@ -7,16 +7,19 @@ export default class extends Component{
         super(props);
         this.state={
             data: props.data,
-            Frame: props.data && props.data[Object.keys(props.data)[0]] || [],
+            Frame: props.data && props.data[props.millseconds] || [],
             hr: props.time,
+            millseconds: props.millseconds
         }
     }
     componentWillReceiveProps(nextProps) {
         if(this.props !== nextProps) {
           this.setState({
             data: nextProps.data,
-            Frame: nextProps.data && nextProps.data[Object.keys(nextProps.data)[0]] || [],
+            Frame: nextProps.data && nextProps.data[nextProps.millseconds] || [],
             hr: nextProps.time,
+            millseconds: nextProps.millseconds
+
           });
         }
       }
@@ -24,14 +27,11 @@ export default class extends Component{
     handleSliderChange = (time) => {
         var obj = this.state.data;
         if (obj && Object.keys(obj).length>0){
-            const floor=Object.keys(obj)[0].slice(-1);
-            const generatedHour = this.state.hr+":"+ parseInt(time.value/60) + ':' + time.value % 60;
-            const currentTime = new Date(`October 13, 2014 ${generatedHour}`);
-            const key=currentTime.toLocaleTimeString(('it-IT'))+'_'+ floor
+            const newTime = this.state.millseconds + time.value;
             this.setState((state) => {
                 return {
                     ...state.data,
-                    Frame: obj[key],
+                    Frame: obj[newTime],
                     }
             });
         }

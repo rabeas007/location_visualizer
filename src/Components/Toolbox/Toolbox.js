@@ -11,7 +11,7 @@ export default class extends Component{
         this.state={
             form:{
                 floor:'',
-                date: '2016-04-01',
+                date: '2016-01-04',
                 time: ''
 
             }
