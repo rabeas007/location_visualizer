@@ -20,15 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Maps/outlinedDiv.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Toolbox/Toolbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Toolbox/Toolbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Maps/Map.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Maps/Map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Maps/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Maps/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Markers/Marker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Markers/Marker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Markers/Marker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Markers/Marker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Slider/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Slider/Slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Slider/Slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,7 +84,11 @@
       <workItem from="1591214509850" duration="439000" />
       <workItem from="1591438852464" duration="13464000" />
       <workItem from="1591465347276" duration="723000" />
-      <workItem from="1591615918809" duration="7552000" />
+      <workItem from="1591615918809" duration="10096000" />
+      <workItem from="1591638350878" duration="4878000" />
+      <workItem from="1591793372251" duration="97000" />
+      <workItem from="1592247350076" duration="4842000" />
+      <workItem from="1592485253777" duration="33122000" />
     </task>
     <servers />
   </component>
@@ -78,9 +96,22 @@
     <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592568151700">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="184" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.803@0.23.1440.803" timestamp="1592568151700" />
     <state width="1419" height="209" key="GridCell.Tab.0.bottom" timestamp="1591606085321">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -109,6 +140,12 @@
           <url>file://$PROJECT_DIR$/src/Components/Markers/Marker.js</url>
           <line>22</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>136</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

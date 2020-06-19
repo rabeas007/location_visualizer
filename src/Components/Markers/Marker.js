@@ -37,19 +37,30 @@ export default class extends Component{
             opened: !opened,
         });
     }
-    render(){
-        const { color, name, id, x, y, receiver_desc, badge_type_desc } = this.props;
+    checkDistance = (receiver) => {
+        const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
 
+        // if (roomElement) {
+        //     setInterval(function(){roomElement.classList.toggle("backgroundRed")},1500);
+        // }
+    };
+    render(){
+        const { color, name, id, x, y, receiver_desc,receiver_id, badge } = this.props;
+        this.checkDistance(receiver_id)
         return (
             <div style={{left: x , top: y, position:"absolute", WebkitAnimation: `run-${this.props.id} 0.7s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
                 {this.state.opened && <Chip
-                    avatar={<Avatar>M</Avatar>}
+                    avatar={<Avatar style={{backgroundColor:color}}>{badge}</Avatar>}
                     variant="outlined"
                     size="small"
                     color='primary'
                     label={id}
+                    style={{
+                        borderColor:color,
+                        color:color,
+                        transform: 'translate(-55%, -26%)'
+                    }}
                     onClick={()=>console.log('Hi') }
-                    // style={{ transform: 'translate(-55%, -26%)'}}
                   />}
                 <div
                   className="pin bounce"

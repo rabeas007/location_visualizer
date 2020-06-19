@@ -2,3 +2,33 @@
     width: 100%;
     height: 100%;
 }
+.pageContainer{
+    height: 86%;
+    display: flex;
+}
+.dashBoardContainer{
+    margin-left: 6px;
+    width: 25%;
+}
+.mapContainer{
+    width:55%;
+}
+.SummaryContainer{
+    margin-top: 5px;
+    float: right;
+    width: 25%;
+    margin-right: 10px;
+    height: 600px;
+}
+.backgroundRed{
+    fill: red;
+    stroke:#ff0000;
+    stroke-width:10;
+    opacity: 0.5;
+}
+
+#divtoBlink{
+    -webkit-transition: background 1.0s ease-in-out;
+    -ms-transition:     background 1.0s ease-in-out;
+    transition:         background 1.0s ease-in-out;
+}

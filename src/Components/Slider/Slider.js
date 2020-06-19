@@ -51,7 +51,7 @@ export default class extends Component{
         ...this.state,
         disabled:true,
       })
-      this.Timer = setInterval(this.setNextFrame, 1000);
+      this.Timer = setInterval(this.setNextFrame, 500);
     }
 
     handleOnPause=()=>{
