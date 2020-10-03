@@ -48,14 +48,15 @@ export default class extends Component{
         const { color, name, id, x, y, receiver_desc,receiver_id, badge } = this.props;
         this.checkDistance(receiver_id)
         return (
-            <div style={{left: x , top: y, position:"absolute", WebkitAnimation: `run-${this.props.id} 0.7s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
+            <div style={{left: x , top: y, position:"absolute", WebkitAnimation: `run-${this.props.id} 1s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
                 {this.state.opened && <Chip
-                    avatar={<Avatar style={{backgroundColor:color}}>{badge}</Avatar>}
+                    avatar={<Avatar style={{backgroundColor:color, }}>{badge}</Avatar>}
                     variant="outlined"
                     size="small"
                     color='primary'
                     label={id}
                     style={{
+                        top: -18, left: 0, position: "absolute",
                         borderColor:color,
                         color:color,
                         transform: 'translate(-55%, -26%)'

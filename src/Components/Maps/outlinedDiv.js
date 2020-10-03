@@ -3,7 +3,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 
 const InputComponent = ({ inputRef, ...other }) => <div {...other} />;
-const OutlinedDiv = ({ children, label }) => {
+const OutlinedDiv = ({ children, label ,height}) => {
     return (
         <TextField
             variant="outlined"
@@ -13,7 +13,7 @@ const OutlinedDiv = ({ children, label }) => {
             InputProps={{
                 inputComponent: InputComponent
             }}
-            inputProps={{ children: children ,style:{height: '600px', overflow: 'scroll'}}}
+            inputProps={{ children: children ,style:{height: height, overflow: 'scroll'}}}
         />
     );
 };

@@ -28,7 +28,7 @@ export default props=>{
         <AppBar position="static">
             <Toolbar>
                 <Typography variant="h6">
-                    RTLS
+                    DFMaps
                 </Typography>
                 <div >
                     <Toolbox className={classes.search} handleOnSearch={props.handleOnSearch}/>
