@@ -48,8 +48,8 @@ class App extends Component{
         let x = 0, y =0 ;
         if (roomElement) {
             const rect = roomElement.getBoundingClientRect();
-            x = Math.random() * (rect.right - (rect.left * 1.01)) + rect.left;
-            y = Math.random() * ((rect.bottom*0.99) - rect.top) + rect.top;
+            x = Math.random() * (rect.right - (rect.left * 1.02 )) + rect.left*1.02;
+            y = Math.random() * ((rect.bottom) - rect.top*1.06) + rect.top*1.01;
         }
         return {x, y}
     };
