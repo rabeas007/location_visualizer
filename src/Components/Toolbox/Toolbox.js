@@ -10,7 +10,7 @@ export default class extends Component{
         super(props);
         this.state={
             form:{
-                floor:'',
+                floor:'6',
                 date: '2016-01-04',
                 time: ''
 
@@ -31,7 +31,7 @@ export default class extends Component{
         
         const {form:{floor, date, time}}=this.state
         var floorsNum=Array.from(Array(14).keys())
-        const FloorlistItems = floorsNum.map((number) => <MenuItem value={number}>{number}</MenuItem>)
+        const FloorlistItems = floorsNum.map((number,index) => <MenuItem disabled={index!==6} value={number}>{number}</MenuItem>)
         var array = [];
         for (var i = 0; i < 24; i++) {
             array.push(moment(i + ':00:00',"HH:mm:ss").format("HH:mm:ss"))}

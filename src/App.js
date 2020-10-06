@@ -136,7 +136,7 @@ class App extends Component{
         return(
             <div className='global-container'>
                 <Header handleOnSearch={this.handleOnSearch}/>
-                <Layouts  data={this.state.selectedData} millseconds={this.state.millseconds} time={this.state.hr}/>
+                <Layouts  fullData={this.state.data} data={this.state.selectedData} millseconds={this.state.millseconds} time={this.state.hr}/>
             </div>)
     }
 }
