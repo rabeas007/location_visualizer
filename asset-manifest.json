@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/DFMAPS/static/css/main.b93389ff.chunk.css",
-    "main.js": "/DFMAPS/static/js/main.cf5345b6.chunk.js",
-    "main.js.map": "/DFMAPS/static/js/main.cf5345b6.chunk.js.map",
-    "runtime-main.js": "/DFMAPS/static/js/runtime-main.40851506.js",
-    "runtime-main.js.map": "/DFMAPS/static/js/runtime-main.40851506.js.map",
-    "static/js/2.c53e5a00.chunk.js": "/DFMAPS/static/js/2.c53e5a00.chunk.js",
-    "static/js/2.c53e5a00.chunk.js.map": "/DFMAPS/static/js/2.c53e5a00.chunk.js.map",
-    "index.html": "/DFMAPS/index.html",
-    "precache-manifest.af96bbaea0792abfec31e06403e144c0.js": "/DFMAPS/precache-manifest.af96bbaea0792abfec31e06403e144c0.js",
-    "service-worker.js": "/DFMAPS/service-worker.js",
-    "static/css/main.b93389ff.chunk.css.map": "/DFMAPS/static/css/main.b93389ff.chunk.css.map",
-    "static/js/2.c53e5a00.chunk.js.LICENSE.txt": "/DFMAPS/static/js/2.c53e5a00.chunk.js.LICENSE.txt",
-    "static/media/6thFloorMapFinal.ec343a69.svg": "/DFMAPS/static/media/6thFloorMapFinal.ec343a69.svg"
+    "main.css": "/location_visualizer/static/css/main.b93389ff.chunk.css",
+    "main.js": "/location_visualizer/static/js/main.cf5345b6.chunk.js",
+    "main.js.map": "/location_visualizer/static/js/main.cf5345b6.chunk.js.map",
+    "runtime-main.js": "/location_visualizer/static/js/runtime-main.bf5f00ed.js",
+    "runtime-main.js.map": "/location_visualizer/static/js/runtime-main.bf5f00ed.js.map",
+    "static/js/2.c53e5a00.chunk.js": "/location_visualizer/static/js/2.c53e5a00.chunk.js",
+    "static/js/2.c53e5a00.chunk.js.map": "/location_visualizer/static/js/2.c53e5a00.chunk.js.map",
+    "index.html": "/location_visualizer/index.html",
+    "precache-manifest.22c5ae845a498984fba920ac23b357b8.js": "/location_visualizer/precache-manifest.22c5ae845a498984fba920ac23b357b8.js",
+    "service-worker.js": "/location_visualizer/service-worker.js",
+    "static/css/main.b93389ff.chunk.css.map": "/location_visualizer/static/css/main.b93389ff.chunk.css.map",
+    "static/js/2.c53e5a00.chunk.js.LICENSE.txt": "/location_visualizer/static/js/2.c53e5a00.chunk.js.LICENSE.txt",
+    "static/media/6thFloorMapFinal.ec343a69.svg": "/location_visualizer/static/media/6thFloorMapFinal.ec343a69.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.40851506.js",
+    "static/js/runtime-main.bf5f00ed.js",
     "static/js/2.c53e5a00.chunk.js",
     "static/css/main.b93389ff.chunk.css",
     "static/js/main.cf5345b6.chunk.js"
