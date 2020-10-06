@@ -6,6 +6,7 @@
     flex-direction: row;
     height: 89%;
     display: flex;
+    margin-top:7px;
 }
 .dashBoardContainer{
     margin-left: 15px;
@@ -13,6 +14,7 @@
 }
 .mapkey{
     float:left;
+    width: 200px;
 }
 .mapContainer{
     width:55%;

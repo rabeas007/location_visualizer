@@ -14,6 +14,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import OutlinedDiv from "./outlinedDiv";
 import {Avatar,Chip} from '@material-ui/core';
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import PropTypes from 'prop-types';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@material-ui/core/Dialog';
+import PersonIcon from '@material-ui/icons/Person';
+import { blue } from '@material-ui/core/colors';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 
 export default class extends Component{
     constructor(props){
@@ -24,9 +37,11 @@ export default class extends Component{
             rooms: {},
             alarmInRooms: {},
             checked:false,
-            searchText:''
+            searchText:'',
+            colocation:[],
+            open:false,
+            roomNum:'',
         }
-        this.colocation={},
         this.Timer = {};
         this.Colors = {
             'Inf RN': '#607D8B',
@@ -50,6 +65,39 @@ export default class extends Component{
         }
 
     }
+
+    handleClickOpen = (colocationData,i) => {
+        this.setState(prevState => ({
+                ...prevState,
+            open:true,
+            colocation:colocationData,
+            roomNum:i
+            }))
+    };
+
+    handleClose = () => {
+        const roomElement = document.querySelector(`[data-name*="${this.state.roomNum}"]`);
+        roomElement.removeAttribute('style')
+        this.setState(prevState => ({
+            ...prevState,
+            open:false,
+            roomNum:'',
+            colocation:[]
+        }))
+    };
+    // setAnchorEl= (e) => {
+    //     this.setState(prevState => ({
+    //         ...prevState,
+    //         anchorEl:e
+    //     }))
+    // }
+    // handleClickPopover = (event) => {
+    //     this.setAnchorEl(event.currentTarget);
+    // };
+    //
+    // handleClosePopover = () => {
+    //     this.setAnchorEl(null);
+    // };
     initIds=(data)=>{
         let listOfIds=[]
         data.forEach(obj => {
@@ -89,6 +137,9 @@ export default class extends Component{
             )
             this.checkIn(listOfIds,rooms,alarm)
             this.activateAlarm(this.state.checked)
+        }
+        if (this.props.rooms !== prevProps.rooms){
+            this.addOnclickToSVG()
         }
     }
 
@@ -214,7 +265,21 @@ export default class extends Component{
             selected: selectedObj ? selectedObj.id: ''
         })
     }
-
+    addOnclickToSVG= () =>{
+        let Rooms = this.props.rooms
+        Rooms && Object.keys(Rooms).forEach((i) => {
+            const roomElement = document.querySelector(`[data-name*="${i}"]`);
+            roomElement.addEventListener('mouseover', event => {
+                    roomElement.setAttribute("style","cursor: pointer;")
+                }
+            )
+            roomElement.addEventListener('click', event => {
+                roomElement.setAttribute("style", "fill: blue; stroke: blue; stroke-width: 2")
+                this.handleClickOpen(Rooms[i],i)
+                }
+            )
+        })
+    }
     render(){
         const classes = this.useStyles();
         return(
@@ -226,7 +291,7 @@ export default class extends Component{
                             control={<Switch checked={this.state.checked} onChange={this.handleSwitchChange} name="checkedB" />}
                             label="Alert Mode"
                         />
-                            <Divider variant="inset" />
+                            <Divider variant="middle" />
                                 <Autocomplete
                                     // onBlur={() => setSearchText("")}
                                     id="include-input-in-list"
@@ -278,7 +343,7 @@ export default class extends Component{
                         </OutlinedDiv>
                     </div>
                     <div className='mapContainer'>
-
+                        <SimpleDialog colocation={this.state.colocation} open={this.state.open} onClose={this.handleClose} colors={this.Colors} />
                         <Mapimg />
                         {this.state.ids.map((obj) => {
                             let color= this.Colors[obj.object.badge_type_desc] ? this.Colors[obj.object.badge_type_desc] : this.Colors['Unknow']
@@ -299,7 +364,7 @@ export default class extends Component{
                         {/*)}*/}
                     </div>
                     <div className='SummaryContainer'>
-                        <OutlinedDiv label="Summary" height='600px'>
+                        <OutlinedDiv label="Summary" height='550px'>
                             <List className={classes.root}>
                             {
                                 Object.keys(this.state.rooms).map((key, index) => {
@@ -349,3 +414,78 @@ export default class extends Component{
         )
     }
 }
+
+const useStyles = makeStyles({
+    avatar: {
+        backgroundColor: blue[100],
+        color: blue[600],
+    },
+    table: {
+        minWidth: 300,
+    },
+});
+
+function SimpleDialog(props) {
+    const classes = useStyles();
+    const { onClose, colocation, open , colors} = props;
+    debugger;
+    const handleClose = () => {
+        onClose();
+    };
+
+    const handleListItemClick = (value) => {
+        onClose(value);
+    };
+    // const sumDuration = ( ) =>{
+    //     const myMap = {};
+    //     colocation.forEach((item) => {
+    //         if(myMap[item.id]) {
+    //             myMap[item.id] += item.duration
+    //         } else {
+    //             myMap[item.id] = item.duration
+    //         }
+    //     })
+    //     console.log(myMap)
+    //     return myMap
+    // }
+    // const myMap= sumDuration()
+    return (
+        <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+            <DialogTitle id="simple-dialog-title">Co-location : {colocation[1] && colocation[1].roomName}</DialogTitle>
+            <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Position</TableCell>
+                            <TableCell align="right">ID</TableCell>
+                            <TableCell align="right">Duration (sec)</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {colocation.map((obj) => {
+                            console.log(obj)
+                            let color= colors[obj.badge] ? colors[obj.badge] : colors['Unknow']
+                            return <>
+                                <TableRow key={obj.id}>
+                                    <TableCell component="th" scope="row">
+                                        <Avatar style={{backgroundColor: color}} className={classes.avatar}>
+                                            <PersonIcon style={{color:'white'}}/>
+                                        </Avatar>{obj.badge}
+                                    </TableCell>
+                                    <TableCell align="right">{obj.id}</TableCell>
+                                    <TableCell align="right">{obj.duration}</TableCell>
+                                </TableRow>
+                            </>
+                        })}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </Dialog>
+    );
+}
+
+SimpleDialog.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+};

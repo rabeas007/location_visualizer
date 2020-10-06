@@ -78,7 +78,7 @@ export default class extends Component{
                     onChange={this.handleOnchange}
                     marks={this.generateMarks(this.props.time)}
                   />
-                <Button variant="contained" color="primary" onClick={this.handleOnPlay} disabled={this.state.disabled}>
+                <Button style={{'margin-right': '2px', }} variant="contained" color="primary" onClick={this.handleOnPlay} disabled={this.state.disabled}>
                 Play
                 </Button>
                 <Button variant="contained" color="secondary" onClick={this.handleOnPause}>
