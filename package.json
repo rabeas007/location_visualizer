@@ -1,5 +1,5 @@
 {
-  "homepage": "http://rabeas007.github.io/location_visualizer",
+  "homepage": "http://amjadegbaria.github.io/location_visualizer",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "date-fns": "^2.11.1",
     "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "http-status-codes": "^1.4.0",
     "moment": "^2.24.0",
     "mongoose": "^5.10.0",
