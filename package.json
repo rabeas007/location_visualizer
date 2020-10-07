@@ -38,13 +38,15 @@
 
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d src/server/server.js",
+    "deploy": "gh-pages -d build",
     "start-client": "react-scripts start",
     "start-server": "cd src/server && node start.js",
     "start": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
     "build": "react-scripts build",
     "test": "react-scripts test --no-cache",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+
   },
   "eslintConfig": {
     "extends": "react-app"
