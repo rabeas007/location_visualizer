@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Components/Layouts/Header';
 import Layouts from './Components/Layouts'
 import axios from 'axios';
+import './app.scss';
 
 class App extends Component{
     constructor(){
@@ -10,9 +11,9 @@ class App extends Component{
         //const Defultdata=this.Frames(6, '2016-04-01', 9)
         this.state={
 
-            data: this.getDataByFloor(6),
+            data: this.getDataByFloor(6, 9),
             hr: 9,
-            fkd:'',
+            millseconds:'',
             selectedData: null,
         }
     }
@@ -42,19 +43,29 @@ class App extends Component{
             x_end_time: "10:17:42"
         });
     }
-    
+    getPosition = (receiver) => {
+        const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
+        let x = 0, y =0 ;
+        if (roomElement) {
+            const rect = roomElement.getBoundingClientRect();
+            x = Math.random() * (rect.right - (rect.left * 1.02 )) + rect.left*1.02;
+            y = Math.random() * ((rect.bottom) - rect.top*1.06) + rect.top*1.01;
+        }
+        return {x, y}
+    };
+
     FramesByTime = (data) => {
         const dataByTime = {};
         data && data.forEach((point)=> {
-            if (point.room_num !== null){
-                const { floor_id, sTime, eTime}=point
-                var start=new Date(`October 13, 2014 ${sTime}`)
-                var end=new Date(`October 13, 2014 ${eTime}`)
-                while (start < end) {
-                    //('it-IT')
-                    var time=start.toLocaleTimeString(('it-IT'), {hour: '2-digit', minute:'2-digit',second: '2-digit',hour12: false})+'_'+ floor_id
-                    dataByTime[time]=dataByTime[time] ? [...dataByTime[time],point] : [point]
-                    start.setSeconds(start.getSeconds() + 1);
+            if (point.receiver_id !== null){
+                const { floor_id, start_time, end_time,receiver_id }=point
+                let pos= this.getPosition(receiver_id)
+                point.x=pos.x
+                point.y=pos.y
+                var start=start_time
+                while (start < end_time) {
+                    dataByTime[start]=dataByTime[start] ? [...dataByTime[start],point] : [point]
+                    start += 1
                 }
             }   
          })
@@ -89,7 +100,7 @@ class App extends Component{
         return matchingFrames
     }
 
-    getDataByFloor = (floor_id, current= 1451898000, next=1451901600) => {
+    getDataByFloor = (floor_id, time ,current= 1451898000, next=1451901600) => {
         axios.get('http://localhost:3001/api/getPointsByFloor',{
             params: {floor_id, current, next}
         })
@@ -97,6 +108,8 @@ class App extends Component{
 
                 this.setState({
                     data,
+                    hr:time,
+                    millseconds:current,
                     selectedData: this.FramesByTime(data)
                 })
             })
@@ -115,15 +128,16 @@ class App extends Component{
         const nextHour = (time+1) + ':00:00';
         const currentTime = this.toTimestamp(date,generatedHour)
         const nextTime = this.toTimestamp(date,nextHour)
-        this.getDataByFloor(floor, currentTime, nextTime)
+
+        this.getDataByFloor(floor,time, currentTime, nextTime)
     };
     
     render(){
         return(
-            <>
+            <div className='global-container'>
                 <Header handleOnSearch={this.handleOnSearch}/>
-                <Layouts  data={this.state.selectedData} time={this.state.hr}/>
-            </>)
+                <Layouts  fullData={this.state.data} data={this.state.selectedData} millseconds={this.state.millseconds} time={this.state.hr}/>
+            </div>)
     }
 }
 

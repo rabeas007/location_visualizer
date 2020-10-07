@@ -1,37 +1,22 @@
 import React, { Component } from 'react'
-import {Paper} from '@material-ui/core';
 import {FormControl, InputLabel, MenuItem,Select, Button} from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
 import {MuiPickersUtilsProvider,KeyboardDatePicker} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import * as moment from 'moment';
+import './Toolbox.scss';
 
 export default class extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props);
         this.state={
             form:{
-                floor:'',
-                date: '2016-04-01',
+                floor:'6',
+                date: '2016-01-04',
                 time: ''
 
             }
         }
     }
-    useStyles = makeStyles(theme => ({
-        
-        formControl: {
-            display:'flex', 
-            justifyContent:'center', 
-            alignItems:'center',
-            marginTop:10,
-            marginBottom:10,
-        }
-        ,
-        selectEmpty: {
-          marginTop: theme.spacing(2),
-        },
-      }));
     
     handleChange= name => ({target: {value}}) =>{
         this.setState({
@@ -41,34 +26,19 @@ export default class extends Component{
             }
         })
     }
-    handlChange= name => (event, date) => {
-        this.setState({
-            form:{
-            ...this.state.form,
-            date: date
-            }
-        })
-    }
 
     render(){
         
         const {form:{floor, date, time}}=this.state
-        const classes = this.useStyles
         var floorsNum=Array.from(Array(14).keys())
-        const FloorlistItems = floorsNum.map((number) => <MenuItem value={number}>{number}</MenuItem>)
+        const FloorlistItems = floorsNum.map((number,index) => <MenuItem disabled={index!==6} value={number}>{number}</MenuItem>)
         var array = [];
         for (var i = 0; i < 24; i++) {
             array.push(moment(i + ':00:00',"HH:mm:ss").format("HH:mm:ss"))}
         const TimelistItems = array.map((val, index) => <MenuItem value={index}>{val}</MenuItem>)
 
         return(
-            <div style={ {
-                display:'flex', 
-                justifyContent:'center', 
-                alignItems:'center',
-                marginTop:10,
-                marginBottom:10,
-            }}>
+            <div className='toolbox'>
 
             <div className={this.props.className}>
                 <FormControl variant="outlined" style={{minWidth: '170px'}}>
@@ -94,7 +64,7 @@ export default class extends Component{
                     format="MM/dd/yyyy"
                     label="Date picker inline"
                     value={date}
-                    onChange={this.handlChange('date')}
+                    onChange={this.handleChange('date')}
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
                     }}/>

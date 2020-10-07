@@ -1,90 +1,85 @@
 import React,{Component} from 'react'
-import {Grid, Paper} from '@material-ui/core';
-import Toolbox from '../Toolbox/Toolbox'
 import DiscreteSlider from '../Slider/Slider'
 import Map from '../Maps/Map'
-import {data} from '../Store'
 
-const styles={
-    Paper : {padding: 2, marginTop:10, marginBottom:10, height:500, overflowY:'auto'}
-}
 export default class extends Component{
     constructor(props){
-        super(props)
+        super(props);
         this.state={
+            fullData:props.fullData,
             data: props.data,
-            Frame: props.data && props.data[Object.keys(props.data)[0]] || [],
+            Frame: props.data && props.data[props.millseconds] || [],
             hr: props.time,
+            millseconds: props.millseconds
         }
     }
-
-    // componentDidUpdate = (prevProps) => {
-    //     if(prevProps.data !== this.props.data) {
-    //       this.setState({
-    //         data: this.props.data,
-    //         Frame: this.props.data[Object.keys(this.props.data)[0]],
-    //         hr: this.props.time,
-    //       });
-    //     }
-    // }
-
     componentWillReceiveProps(nextProps) {
-        if(this.props != nextProps) {
+        if(this.props !== nextProps) {
           this.setState({
+              fullData:nextProps.fullData,
             data: nextProps.data,
-            Frame: nextProps.data && nextProps.data[Object.keys(nextProps.data)[0]] || [],
+            Frame: nextProps.data && nextProps.data[nextProps.millseconds] || [],
             hr: nextProps.time,
+            millseconds: nextProps.millseconds
+
           });
         }
       }
+    toColocation(data){
+        // debugger;
+        let rooms={}
+        let myMap={}
+        let prev=0
+        data && data.forEach(obj => {
+            // console.log(obj.badge_type_desc)
+            if (prev !== obj.receiver_id){
+                myMap={}
+            }
+            if (rooms[obj.receiver_id]){
 
+                if(myMap[obj.id_number]) {
+                    myMap[obj.id_number] += obj.duration_sec
+                    rooms[obj.receiver_id].find(v => v.id === obj.id_number).duration= myMap[obj.id_number]
+                }
+                else {
+                    myMap[obj.id_number] = obj.duration_sec
+                    rooms[obj.receiver_id] = [...rooms[obj.receiver_id],{'id':obj.id_number, 'duration':obj.duration_sec, 'badge':obj.badge_type_desc, 'roomName':obj.receiver_desc}]
+                }
 
-    // filterDefaultValues = () => {
-    //     var obj = this.props.data
-    //     const defaultData=obj[Object.keys(obj)[0]]
-    //     return defaultData
-    // }
-    handleSilderChang = (time) => {
-        var obj = this.state.data 
+            }
+            else{
+                rooms[obj.receiver_id]=[{'id':obj.id_number, 'duration':obj.duration_sec, 'badge':obj.badge_type_desc, 'roomName':obj.receiver_desc}]
+            }
+            prev=obj.receiver_id
+        })
+
+        return rooms
+    }
+    handleSliderChange = (time) => {
+        var obj = this.state.data;
         if (obj && Object.keys(obj).length>0){
-            const floor=Object.keys(obj)[0].slice(-1);
-            const generatedHour = this.state.hr+":"+ parseInt(time.value/60) + ':' + time.value % 60;
-            const currentTime = new Date(`October 13, 2014 ${generatedHour}`);
-            const key=currentTime.toLocaleTimeString(('it-IT'))+'_'+ floor
+            const newTime = this.state.millseconds + time.value;
             this.setState((state) => {
                 return {
                     ...state.data,
-                    Frame: obj[key],
+                    Frame: obj[newTime],
                     }
             });
-        
-        // filter this.props.data by time and setState ({data : result of the filter})
         }
-    }
-    newDataStream= (newData) => {
-        this.setState({
-            data: newData
-        })
     }
 
     render(){
-        const showFrame=this.state.Frame
-        const startingHour= this.state.hr
+        const showFrame=this.state.Frame;
+        const startingHour= this.state.hr;
+        let rooms=this.toColocation(this.state.fullData)
+        console.log(rooms)
+
+        // console.log(this.props.fullData)
         return(
-                <Grid container spacing={2}>
-                    <Grid container spacing={2}  direction="column" xs>
-                        <Grid item  >
-                            <Paper style={{padding: 2, marginTop:10,marginBottom:2, height:590, overflowY:'auto'}}>
-                            <Map data={showFrame} />
-                            </Paper>
-                        </Grid>
-                        <Grid item>
-                        <Paper style={{padding: 'auto', marginLeft:10}}>
-                                    <DiscreteSlider onChange={this.handleSilderChang} time={startingHour} />
-                                </Paper>
-                        </Grid>
-                    </Grid>
-                </Grid>
+            <div className='map-container'>
+                <Map rooms={rooms} data={showFrame} />
+                <DiscreteSlider onChange={this.handleSliderChange} time={startingHour} />
+            </div>
         )
     }
 }

@@ -1,83 +1,75 @@
-
 import React, {Component} from 'react';
 import './Marker.css';
 import {Avatar,Chip} from '@material-ui/core';
 
 
 export default class extends Component{
-  constructor(props){
-      super(props)
-      this.state={
-        opened: false,
-      }
-      this.timeout = '';
-      this.marker=React.createRef();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.props.x !== prevProps.x || this.props.y !== prevProps.y) {
-        // let counter = 0;
-        // this.timeout = setTimeout(() => {
-        //     counter ++;
-        //     this.step(counter);
-        //     if(counter > Math.abs(this.props.x - prevProps.x)) {
-        //         clearTimeout(this.timeout)
-        //     }
-        // }, 20)
-        this.handleAnimation(prevProps.x, prevProps.y, this.props.x, this.props.y)
+    constructor(props){
+        super(props);
+        this.state={
+            opened: false,
+        }
+        this.timeout = '';
+        this.marker=React.createRef();
     }
-  } 
-  handleAnimation = (prevLeft, prevBottom, left, bottom) => {
-    const keyframesStyle = `
-    @-webkit-keyframes run-${this.props.id} {
-      0%   { left: ${prevLeft}; bottom: ${prevBottom}; }
-      100% { left: ${left}; bottom: ${bottom}; }
-    }`;
-    const styleElement = document.createElement('style');
-    let styleSheet = null;
+    componentDidUpdate(prevProps) {
+        if (this.props.x !== prevProps.x || this.props.y !== prevProps.y) {
 
-    document.head.appendChild(styleElement);
+            this.handleAnimation(prevProps.x, prevProps.y, this.props.x, this.props.y)
 
-    styleSheet = styleElement.sheet;
+        }
+    } 
+    handleAnimation = (prevLeft, prevBottom, left, bottom) => {
+        const keyframesStyle = `
+        @-webkit-keyframes run-${this.props.id} {
+          0%   { left: ${prevLeft}; bottom: ${prevBottom}; }
+          100% { left: ${left}; bottom: ${bottom}; }
+        }`;
+        const styleElement = document.createElement('style');
+        document.head.appendChild(styleElement);
+        const styleSheet = styleElement.sheet;
+        styleSheet.insertRule(keyframesStyle, styleSheet.cssRules.length);
+    };
 
-    styleSheet.insertRule(keyframesStyle, styleSheet.cssRules.length);
-}
-  showLabel=()=>{
-    const { opened } = this.state;
-		this.setState({
-			opened: !opened,
-		});
-  }
-  step = (counter) => {
-    if(this.marker) {
-        this.marker.style.transform = 'translate(' + counter + 'px, ' + counter + 'px)';
+    showLabel=()=>{
+        const { opened } = this.state;
+        this.setState({
+            opened: !opened,
+        });
     }
+    checkDistance = (receiver) => {
+        const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
 
-};
-
-  render(){
-    const { color, name, id, x, y} = this.props;
-    return (
-      <div style={{left:x , bottom:y, position:"absolute", WebkitAnimation: `run-${this.props.id} 1s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
-        {this.state.opened && <Chip
-            avatar={<Avatar>M</Avatar>}
-            variant="outlined"
-            size="small"
-            color='primary'
-            label={id}
-            onClick={()=>console.log('Hi') }
-            style={{ transform: 'translate(-55%, -26%)'}}
-          />}
-        <div
-          className="pin bounce"
-          style={{ backgroundColor: color, cursor: 'pointer'}}
-          title={name + ' '+id}
-          />
-        <div className="pulse" />
-        {/* <span style={{fontSize:8}}>{id}</span> */}
-
-      </div>
-    )
-  }
+        // if (roomElement) {
+        //     setInterval(function(){roomElement.classList.toggle("backgroundRed")},1500);
+        // }
+    };
+    render(){
+        const { color, name, id, x, y, receiver_desc,receiver_id, badge } = this.props;
+        this.checkDistance(receiver_id)
+        return (
+            <div style={{left: x , top: y, position:"absolute", WebkitAnimation: `run-${this.props.id} 1s linear`}} ref={ref => this.marker = ref} id={id} onClick={this.showLabel}>
+                {this.state.opened && <Chip
+                    avatar={<Avatar style={{backgroundColor:color, }}>{badge}</Avatar>}
+                    variant="outlined"
+                    size="small"
+                    color='primary'
+                    label={id}
+                    style={{
+                        top: -18, left: 0, position: "absolute",
+                        borderColor:color,
+                        color:color,
+                        transform: 'translate(-55%, -26%)'
+                    }}
+                    onClick={()=>console.log('Hi') }
+                  />}
+                <div
+                  className="pin bounce"
+                  style={{ backgroundColor: color, cursor: 'pointer'}}
+                  title={receiver_desc + ' '+id}
+                  />
+                <div className="pulse" />
+            </div>)
+    }
 }
 
