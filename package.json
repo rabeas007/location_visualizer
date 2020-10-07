@@ -1,4 +1,5 @@
 {
+  "homepage": "http://amjadegbaria.github.io/location_visualizer",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -34,19 +35,16 @@
     "react-svg-pan-zoom": "^3.8.0",
     "react-svg-pan-zoom-loader": "^1.4.1"
   },
+
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d start",
     "start-client": "react-scripts start",
     "start-server": "cd src/server && node start.js",
-    "dev": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
+    "start": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
     "build": "react-scripts build",
     "test": "react-scripts test --no-cache",
-    "eject": "react-scripts eject",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build"
-  },
-  "engines": {
-    "node": "13.8.0"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
