@@ -35,9 +35,10 @@
     "react-svg-pan-zoom": "^3.8.0",
     "react-svg-pan-zoom-loader": "^1.4.1"
   },
+
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d src/server/server.js",
     "start-client": "react-scripts start",
     "start-server": "cd src/server && node start.js",
     "start": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
