@@ -1,11 +1,11 @@
-import cors from 'cors';
-import mongoose from 'mongoose';
-import express from 'express';
-import bodyParser from 'body-parser';
-import logger from 'morgan';
-import PointApi from './api/points';
-
-const API_PORT = 3001;
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const logger= require('morgan')
+const PointApi=require('./api/points')
+const API_PORT = process.env.API_PORT || 3001;
+// const API_PORT = 3001;
 const app = express();
 app.use(cors());
 const router = express.Router();
@@ -25,7 +25,7 @@ db.once('open', () => console.log('connected to the database'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //create an index to handle finding the points faster
-db.collections.points.createIndex( { floor_id: 1,  start_date: 1, end_date: 1} );
+db.collection('points').createIndex( { floor_id: 1,  start_date: 1, end_date: 1} );
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format

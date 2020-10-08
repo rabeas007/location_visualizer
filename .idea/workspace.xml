@@ -15,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/models/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/models/Point.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.8.4.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.8.4.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/points.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +92,7 @@
       <workItem from="1593362924287" duration="1491000" />
       <workItem from="1598189141501" duration="2500000" />
       <workItem from="1598460912920" duration="931000" />
-      <workItem from="1601639373801" duration="71381000" />
+      <workItem from="1601639373801" duration="79693000" />
     </task>
     <servers />
   </component>
@@ -111,6 +115,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-144" y="-980" width="1720" height="880" key="DiffContextDialog" timestamp="1602175950468">
+      <screen x="-244" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="-144" y="-980" width="1720" height="880" key="DiffContextDialog/-244.-1080.1920.1080/0.0.1440.900@-244.-1080.1920.1080" timestamp="1602175950467" />
     <state x="421" y="82" width="598" height="735" key="find.popup" timestamp="1601661560567">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
