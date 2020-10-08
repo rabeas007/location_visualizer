@@ -47,7 +47,7 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": "13.8.0",
+    "node": "13.8.0"
 },
   "eslintConfig": {
     "extends": "react-app"
