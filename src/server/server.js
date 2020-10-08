@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const logger= require('morgan')
 const PointApi=require('./api/points')
-const PORT = process.env.PORT || 3001;
-// const API_PORT = 3001;
+
+// if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
+
 const app = express();
+app.set( 'port', ( process.env.PORT || 3001 ));
 app.use(cors());
 const router = express.Router();
 
@@ -55,4 +57,5 @@ app.post('/api/addPoint', PointApi.addPoint);
 app.use('/api', router);
 
 // launch our backend into a port
-app.listen(PORT, () => console.log(`LISTENING ON PORT ${PORT}`));
+
+app.listen(app.get( 'port' ), () =>console.log( 'Node server is running on port ' + app.get( 'port' )))
