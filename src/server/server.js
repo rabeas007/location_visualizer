@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const logger= require('morgan')
 const PointApi=require('./api/points')
 
-// if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 // const PORT = 3001;
 const app = express();
 app.set( 'port', ( process.env.PORT || 3001 ));
