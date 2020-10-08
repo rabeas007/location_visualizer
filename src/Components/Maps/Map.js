@@ -100,7 +100,7 @@ export default class extends Component{
     // };
     initIds=(data)=>{
         let listOfIds=[]
-        data.forEach(obj => {
+        data && data.forEach(obj => {
                 // console.log(obj.badge_type_desc)
                 let ids={}
                 ids['id']=String(obj.id_number)
@@ -463,7 +463,7 @@ function SimpleDialog(props) {
                     </TableHead>
                     <TableBody>
                         {colocation.map((obj) => {
-                            console.log(obj)
+                            // console.log(obj)
                             let color= colors[obj.badge] ? colors[obj.badge] : colors['Unknow']
                             return <>
                                 <TableRow key={obj.id}>
