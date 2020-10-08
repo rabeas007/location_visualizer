@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const logger= require('morgan')
 const PointApi=require('./api/points')
-const API_PORT = process.env.API_PORT || 3001;
+const PORT = process.env.PORT || 3001;
 // const API_PORT = 3001;
 const app = express();
 app.use(cors());
@@ -55,4 +55,4 @@ app.post('/api/addPoint', PointApi.addPoint);
 app.use('/api', router);
 
 // launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(PORT, () => console.log(`LISTENING ON PORT ${PORT}`));
