@@ -6,7 +6,7 @@ const logger= require('morgan')
 const PointApi=require('./api/points')
 
 // if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
-// const PORT = 3001;
+
 const app = express();
 app.set( 'port', ( process.env.PORT || 3001 ));
 app.use(cors());
@@ -57,4 +57,5 @@ app.post('/api/addPoint', PointApi.addPoint);
 app.use('/api', router);
 
 // launch our backend into a port
+
 app.listen(app.get( 'port' ), () =>console.log( 'Node server is running on port ' + app.get( 'port' )))
