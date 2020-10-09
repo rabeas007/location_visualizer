@@ -100,15 +100,15 @@ export default class extends Component{
     // };
     initIds=(data)=>{
         let listOfIds=[]
-        data && data.forEach(obj => {
+        for (const obj of data) {
                 // console.log(obj.badge_type_desc)
                 let ids={}
                 ids['id']=String(obj.id_number)
                 ids['appear']=true
                 ids['object']=obj
                 listOfIds.push(ids)
-            }
-        )
+        }
+
         return listOfIds
     }
     componentDidUpdate(prevProps) {
@@ -117,7 +117,7 @@ export default class extends Component{
         let listOfIds=[]
         const alarm={}
         if (this.props.data !== prevProps.data) {
-            this.props.data.forEach(obj => {
+            for (const obj of this.props.data) {
                 // console.log(obj.badge_type_desc)
                 rooms[obj.receiver_id] = rooms[obj.receiver_id] ? [...rooms[obj.receiver_id], obj] : [obj]
                 let ids={}
@@ -134,7 +134,7 @@ export default class extends Component{
                     alarm[obj.receiver_id]=true
                 }
             }
-            )
+
             this.checkIn(listOfIds,rooms,alarm)
             this.activateAlarm(this.state.checked)
         }
@@ -169,19 +169,20 @@ export default class extends Component{
     activateAlarm= (checked) => {
         var ARooms = this.state.alarmInRooms
         if (checked) {
-            Object.keys(this.Timer).forEach((room)=> {
+            for (const room of Object.keys(this.Timer)){
                 const roomElement = document.querySelector(`[data-name*="${room}"]`);
                 if (roomElement.classList.contains('backgroundRed')) {
                     roomElement.classList.remove('backgroundRed');
                 }
                 clearInterval(this.Timer[room])
-            })
-            Object.keys(ARooms).forEach((i) => {
+            }
+            for (const i of Object.keys(ARooms)){
+
                 this.Timer[i] = setInterval(function () {
                         const roomElement = document.querySelector(`[data-name*="${i}"]`);
                         roomElement.classList.toggle("backgroundRed")
                 },1500)
-            })
+            }
         }
     }
 

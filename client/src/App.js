@@ -56,7 +56,7 @@ class App extends Component{
 
     FramesByTime = (data) => {
         const dataByTime = {};
-        data && data.forEach((point)=> {
+        for (const point of data) {
             if (point.receiver_id !== null){
                 const { floor_id, start_time, end_time,receiver_id }=point
                 let pos= this.getPosition(receiver_id)
@@ -68,7 +68,7 @@ class App extends Component{
                     start += 1
                 }
             }   
-         })
+         }
         return dataByTime
     }
     isIntervalIncluded = (time, point) => {

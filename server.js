@@ -42,10 +42,10 @@ db.collection('points').createIndex( { floor_id: 1,  start_date: 1, end_date: 1}
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-// app.use(logger('dev'));
-// app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 // this is our get method
 // this method fetches all available data in our database
