@@ -6,19 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/precache-manifest.dff4dca7effa60f5da025ffa8297be1d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.a8dcc23d.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.a8dcc23d.chunk.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/Components/Layouts/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/Components/Layouts/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/Components/Slider/Slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/Components/Slider/Slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/Components/Toolbox/Toolbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/Components/Toolbox/Toolbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/api/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/api/points.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/models/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/models/Point.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location_visualizer/src/server/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/location_visualizer/src/server/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.1934009a3fb5e3df43d3af256752d5d9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.cf5345b6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.cf5345b6.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/location_visualizer" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Maps/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Maps/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <workItem from="1593362924287" duration="1491000" />
       <workItem from="1598189141501" duration="2500000" />
       <workItem from="1598460912920" duration="931000" />
-      <workItem from="1601639373801" duration="86682000" />
+      <workItem from="1601639373801" duration="90496000" />
     </task>
     <servers />
   </component>
