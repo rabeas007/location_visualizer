@@ -25,7 +25,7 @@ app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const dbRoute = process.env.DB_CONNECTION || 'mongodb+srv://rabeashamaly:rabeashamaly@cluster0-q1h8e.mongodb.net/in-door-locations?retryWrites=true&w=majority';
+const dbRoute = process.env.MONGODB_URI || 'mongodb+srv://rabeashamaly:rabeashamaly@cluster0-q1h8e.mongodb.net/in-door-locations?retryWrites=true&w=majority';
 
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -42,10 +42,10 @@ db.collection('points').createIndex( { floor_id: 1,  start_date: 1, end_date: 1}
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-// app.use(logger('dev'));
-// app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 // this is our get method
 // this method fetches all available data in our database

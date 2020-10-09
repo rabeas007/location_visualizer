@@ -2,7 +2,6 @@
 // import Point from '../models/Point';
 
 var HttpStatus = require('http-status-codes')
-require("regenerator-runtime/runtime");
 const Point=require('../models/Point')
 
 class PointsApi {

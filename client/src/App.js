@@ -19,7 +19,7 @@ class App extends Component{
     }
 
     loadPoints = () => {
-        axios.get('http://localhost:3001/api/getPoints')
+        axios.get('/api/getPoints')
             .then(({ data }) => {
                 this.setState({
                     fkd: data,
@@ -30,7 +30,7 @@ class App extends Component{
             });
     }
     addPoint = () => {
-        axios.post('http://localhost:3001/api/putData', {
+        axios.post('/api/putData', {
             id_number: 10000064,
             badge_type_desc: "Inf RN",
             start_date: 1451902509000,
@@ -56,7 +56,7 @@ class App extends Component{
 
     FramesByTime = (data) => {
         const dataByTime = {};
-        data && data.forEach((point)=> {
+        for (const point of data) {
             if (point.receiver_id !== null){
                 const { floor_id, start_time, end_time,receiver_id }=point
                 let pos= this.getPosition(receiver_id)
@@ -68,7 +68,7 @@ class App extends Component{
                     start += 1
                 }
             }   
-         })
+         }
         return dataByTime
     }
     isIntervalIncluded = (time, point) => {
