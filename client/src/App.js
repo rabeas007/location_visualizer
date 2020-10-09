@@ -19,7 +19,7 @@ class App extends Component{
     }
 
     loadPoints = () => {
-        axios.get('http://localhost:3001/api/getPoints')
+        axios.get('/api/getPoints')
             .then(({ data }) => {
                 this.setState({
                     fkd: data,
@@ -30,7 +30,7 @@ class App extends Component{
             });
     }
     addPoint = () => {
-        axios.post('http://localhost:3001/api/putData', {
+        axios.post('/api/putData', {
             id_number: 10000064,
             badge_type_desc: "Inf RN",
             start_date: 1451902509000,
