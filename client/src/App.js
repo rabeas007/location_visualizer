@@ -55,7 +55,7 @@ class App extends Component{
     };
 
     FramesByTime = (data) => {
-        const dataByTime = {};
+        let dataByTime = {};
         let pos={}
         if (data !== null && data !== undefined) {
             for (let point of data) {
