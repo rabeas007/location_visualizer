@@ -6,31 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/build/precache-manifest.249235e9ce26dc5ae1993ebb98607c74.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.f13b3e58.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.f13b3e58.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.4900398b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.4900398b.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/points.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.b8909fbeb04f3f78e950e9a5df37f44e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.56576dbd.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.56576dbd.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/runtime-main.83c3e0c4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/runtime-main.83c3e0c4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +124,7 @@
       <workItem from="1598189141501" duration="2500000" />
       <workItem from="1598460912920" duration="931000" />
       <workItem from="1601639373801" duration="102228000" />
-      <workItem from="1602282007117" duration="7660000" />
+      <workItem from="1602282007117" duration="8255000" />
     </task>
     <servers />
   </component>
@@ -219,7 +196,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/App.js</url>
-          <line>136</line>
+          <line>137</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
