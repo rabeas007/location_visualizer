@@ -45,21 +45,22 @@ class App extends Component{
     }
     getPosition = (receiver) => {
         const roomElement = document.querySelector(`[data-name*="${receiver}"]`);
-        let x = 0, y =0 ;
+        let pos={}
         if (roomElement) {
             const rect = roomElement.getBoundingClientRect();
-            x = Math.random() * (rect.right - (rect.left * 1.02 )) + rect.left*1.02;
-            y = Math.random() * ((rect.bottom) - rect.top*1.06) + rect.top*1.01;
+            pos['x'] = Math.random() * (rect.right - (rect.left * 1.02 )) + rect.left*1.02;
+            pos['y'] = Math.random() * ((rect.bottom) - rect.top*1.06) + rect.top*1.01;
         }
-        return {x, y}
+        return pos
     };
 
     FramesByTime = (data) => {
         const dataByTime = {};
+        let pos={}
         for (let point of data) {
             if (point.receiver_id !== null){
                 const { floor_id, start_time, end_time,receiver_id }=point
-                let pos= this.getPosition(receiver_id)
+                pos= this.getPosition(receiver_id)
                 point.x=pos.x
                 point.y=pos.y
                 var start=start_time
