@@ -6,11 +6,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/build/precache-manifest.249235e9ce26dc5ae1993ebb98607c74.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.ecf1966c.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.f13b3e58.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.f13b3e58.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.4900398b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.4900398b.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/points.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/points.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.b8909fbeb04f3f78e950e9a5df37f44e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.d1c01cee.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.56576dbd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.56576dbd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/runtime-main.83c3e0c4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/runtime-main.83c3e0c4.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Maps/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Maps/Map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +147,7 @@
       <workItem from="1598189141501" duration="2500000" />
       <workItem from="1598460912920" duration="931000" />
       <workItem from="1601639373801" duration="102228000" />
-      <workItem from="1602282007117" duration="2978000" />
+      <workItem from="1602282007117" duration="7660000" />
     </task>
     <servers />
   </component>
@@ -179,12 +198,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602282031029" />
-    <state x="421" y="82" width="599" height="735" key="find.popup" timestamp="1602285130793">
+    <state x="421" y="82" width="645" height="735" key="find.popup" timestamp="1602321549924">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="317" y="-982" width="798" height="882" key="find.popup/-244.-1080.1920.1080/0.0.1440.900@-244.-1080.1920.1080" timestamp="1602191298049" />
     <state x="421" y="82" width="598" height="735" key="find.popup/-244.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1601661560567" />
-    <state x="421" y="82" width="599" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1602285130793" />
+    <state x="421" y="82" width="645" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1602321549924" />
     <state x="385" y="151" width="670" height="750" key="search.everywhere.popup" timestamp="1601893470771">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
