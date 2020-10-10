@@ -66,7 +66,6 @@ class App extends Component{
                     point['y'] = pos.y
                     var start = start_time
                     while (start < end_time) {
-                        dataByTime[start]=[]
                         dataByTime[start] = dataByTime[start] ? [...dataByTime[start], point] : [point]
                         start += 1
                     }
