@@ -30,6 +30,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "engines": {
+    "node": "13.8.0"
+  },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
