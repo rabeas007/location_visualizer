@@ -2,7 +2,7 @@
 // import Point from '../models/Point';
 
 var HttpStatus = require('http-status-codes')
-const Point=require('../models/Point')
+let Point=require('../models/Point')
 
 class PointsApi {
     static getPoints(req, res) {

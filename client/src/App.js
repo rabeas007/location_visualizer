@@ -56,7 +56,7 @@ class App extends Component{
 
     FramesByTime = (data) => {
         const dataByTime = {};
-        for (const point of data) {
+        for (let point of data) {
             if (point.receiver_id !== null){
                 const { floor_id, start_time, end_time,receiver_id }=point
                 let pos= this.getPosition(receiver_id)
