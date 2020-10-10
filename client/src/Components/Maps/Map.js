@@ -429,7 +429,7 @@ const useStyles = makeStyles({
 function SimpleDialog(props) {
     const classes = useStyles();
     const { onClose, colocation, open , colors} = props;
-    debugger;
+    // debugger;
     const handleClose = () => {
         onClose();
     };
