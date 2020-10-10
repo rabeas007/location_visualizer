@@ -57,19 +57,21 @@ class App extends Component{
     FramesByTime = (data) => {
         const dataByTime = {};
         let pos={}
-        for (let point of data) {
-            if (point.receiver_id !== null){
-                const { floor_id, start_time, end_time,receiver_id }=point
-                pos= this.getPosition(receiver_id)
-                point.x=pos.x
-                point.y=pos.y
-                var start=start_time
-                while (start < end_time) {
-                    dataByTime[start]=dataByTime[start] ? [...dataByTime[start],point] : [point]
-                    start += 1
+        if (data !== null && data !== undefined) {
+            for (let point of data) {
+                if (point.receiver_id !== null) {
+                    const {floor_id, start_time, end_time, receiver_id} = point
+                    pos = this.getPosition(receiver_id)
+                    point.x = pos.x
+                    point.y = pos.y
+                    var start = start_time
+                    while (start < end_time) {
+                        dataByTime[start] = dataByTime[start] ? [...dataByTime[start], point] : [point]
+                        start += 1
+                    }
                 }
-            }   
-         }
+            }
+        }
         return dataByTime
     }
     isIntervalIncluded = (time, point) => {

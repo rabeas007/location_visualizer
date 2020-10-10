@@ -5,8 +5,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="">
+    <list default="true" id="13b08c72-e4f3-4ea5-95aa-c688de230699" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8881cabb-d5b7-435d-89c9-441f598a4185" name="Default Changelist" comment="" />
+      <changelist id="13b08c72-e4f3-4ea5-95aa-c688de230699" name="Default Changelist" comment="" />
       <created>1590668976516</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -124,6 +125,7 @@
       <workItem from="1598460912920" duration="931000" />
       <workItem from="1601639373801" duration="102228000" />
       <workItem from="1602282007117" duration="8867000" />
+      <workItem from="1602335068595" duration="400000" />
     </task>
     <servers />
   </component>
@@ -170,10 +172,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602277638210" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1602282031029">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1602335166815">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602282031029" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602335166815" />
     <state x="421" y="82" width="645" height="735" key="find.popup" timestamp="1602321549924">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -195,7 +197,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/App.js</url>
-          <line>137</line>
+          <line>139</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
